@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Verification System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Drug Verification System</h1>
+        <form id="verification-form">
+            <div class="form-group">
+                <label for="batch_number">Batch Number:</label>
+                <!-- Example of typical batch number -->
+                <input type="text" id="batch_number" name="batch_number" placeholder="e.g. LOT2024AB123" required>
+            </div>
+            <div class="form-group">
+                <label for="drug_id">Drug ID:</label>
+                <!-- Example of typical Drug ID -->
+                <input type="text" id="drug_id" name="drug_id" placeholder="e.g. DRG00123" required>
+            </div>
+            <div class="form-group">
+                <label for="nafdac_number">NAFDAC Registration Number:</label>
+                <!-- Example of typical NAFDAC Registration Number -->
+                <input type="text" id="nafdac_number" name="nafdac_number" placeholder="e.g. A7-1234" required>
+            </div>
+            <button type="submit">Verify Drug</button>
+        </form>
+
+        <!-- Display Verification Result or Error Message -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
